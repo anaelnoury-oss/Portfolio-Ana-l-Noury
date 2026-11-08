@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Anaël Noury — contemporary cinematic composer and producer."><title>Anaël Noury — Composer & Producer</title>
+<style>
+
+:root{--ink:#eee9e1;--paper:#11100f;--muted:#a39a91;--line:rgba(238,233,225,.18);--accent:#8e5149}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:#11100f;overflow-x:hidden}
+body{margin:0;min-width:320px;width:100%;overflow-x:hidden;background:#11100f;color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}
+.wrap{width:100%;max-width:none;margin:0;padding-left:clamp(22px,5vw,84px);padding-right:clamp(22px,5vw,84px)}
+header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);font-size:10px;letter-spacing:.18em;text-transform:uppercase}
+.brand{font-size:13px;letter-spacing:.2em;font-weight:700}
+nav{display:flex;gap:clamp(16px,3vw,42px);color:#c5bdb4}
+nav a:hover{color:#b9796d}
+.hero{min-height:calc(100vh - 82px);display:flex;flex-direction:column;justify-content:space-between;padding:clamp(65px,9vh,110px) 0 42px;position:relative;isolation:isolate;color:#f4f1e9;background:linear-gradient(90deg,rgba(8,7,7,.86) 0%,rgba(8,7,7,.45) 58%,rgba(8,7,7,.18) 100%),linear-gradient(0deg,rgba(8,7,7,.55),transparent 55%),url('assets/anael-red-house.webp') center 43%/cover no-repeat}
+.eyebrow,.kicker{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#b6a69b}
+.hero h1{font-family:Georgia,serif;font-size:clamp(64px,12vw,160px);line-height:.82;font-weight:400;letter-spacing:-.075em;margin:70px 0 40px;max-width:1000px}
+.hero-bottom{display:flex;justify-content:space-between;align-items:end;gap:30px}
+.hero-intro{font-family:Georgia,serif;font-size:clamp(20px,2.6vw,31px);line-height:1.25;max-width:600px}
+.hero-note{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#d5c9be;text-align:right;line-height:1.9}
+.rule{border:0;border-top:1px solid var(--line);margin:0}
+section{display:block;width:100%;max-width:100%;padding:clamp(76px,9vw,130px) 0;background:#11100f}
+.section-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:48px}
+.section-head h2{font-family:Georgia,serif;font-size:clamp(38px,6vw,72px);font-weight:400;letter-spacing:-.05em;margin:0}
+.section-head span{font-size:10px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase}
+.intro-grid{display:grid;grid-template-columns:1fr;gap:9vw}
+.presentation-grid{grid-template-columns:.8fr 1.2fr;align-items:center;gap:clamp(36px,8vw,130px)}
+.presentation-photo{margin:0}
+.presentation-photo img{display:block;width:100%;height:min(58vw,620px);min-height:340px;object-fit:cover;object-position:52% center;filter:saturate(.72) contrast(1.08)}
+.intro-grid p{font-family:Georgia,serif;font-size:clamp(22px,3vw,36px);line-height:1.3;margin:0;max-width:650px}
+.small-copy{font-size:13px;line-height:1.9;color:#bdb4aa;max-width:390px}
+.photo-story{padding:18px 0 clamp(76px,9vw,130px)}
+.photo-grid{display:grid;grid-template-columns:1.25fr .9fr .9fr;gap:clamp(8px,1.4vw,20px);align-items:stretch}
+.photo-grid figure{margin:0;min-width:0}.photo-grid-single{grid-template-columns:minmax(0,1fr);max-width:980px}.photo-grid-single img{width:100%;max-height:560px}
+.photo-grid img{display:block;width:100%;height:100%;min-height:270px;max-height:560px;object-fit:cover;filter:saturate(.68) contrast(1.08) brightness(.84)}
+.photo-grid figure:first-child img{object-position:54% center}
+.photo-grid figure:nth-child(2) img{object-position:center 34%}
+.photo-grid figure:nth-child(3) img{object-position:center 42%}
+.photo-label{font-size:9px;letter-spacing:.17em;text-transform:uppercase;color:#a99e94;padding-top:11px}
+.track-category{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#b7aa9d;font-weight:700;padding:30px 0 8px;border-bottom:1px solid var(--line);margin:0}.track-category:first-child{padding-top:8px}.track-list{border-top:1px solid var(--line)}
+.track{display:grid;grid-template-columns:60px 1fr minmax(220px,38%);align-items:center;gap:22px;padding:25px 0;border-bottom:1px solid var(--line)}
+.track-no{font-size:10px;color:#9b8f85;letter-spacing:.15em}
+.track h3,.film h3{font-family:Georgia,serif;font-weight:700;font-size:clamp(21px,2.3vw,28px);margin:0 0 5px;color:#eee9e1}
+.track-info h3{font-weight:900 !important;text-shadow:0 0 .01px currentColor}.track-info h3 strong{font-weight:900 !important}.track-info p,.film-caption span{font-size:10px;text-transform:uppercase;letter-spacing:.16em;color:#a99e94;margin:0}
+audio{width:100%;height:34px;filter:invert(.86) hue-rotate(180deg)}
+.films{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.film video{width:100%;display:block;background:#171715;aspect-ratio:16/9;object-fit:cover}
+.film-caption{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:15px}
+.about-grid{display:grid;grid-template-columns:.35fr 1fr;gap:clamp(30px,8vw,120px);align-items:start}
+.about-kicker{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#a97970;padding-top:8px}
+.about-grid p{font-size:clamp(15px,1.35vw,18px);line-height:1.9;color:#c2b9af;margin:0;max-width:760px}
+.contact{background:#211412;color:#f0e9e1;padding:clamp(80px,10vw,140px) 0}
+.contact .section-head span{color:#bca9a0}
+.contact h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(54px,9vw,112px);letter-spacing:-.07em;line-height:.9;margin:0 0 42px}
+.contact a{border-bottom:1px solid #a47c72;padding-bottom:7px;font-size:13px;display:inline-block}
+footer{background:#211412;color:#a99b92;padding:22px 0 30px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;display:flex;justify-content:space-between}
+@media(max-width:700px){
+.wrap{padding-left:20px;padding-right:20px}
+header{height:auto;padding:22px 0;align-items:flex-start;gap:20px}
+nav{gap:12px;flex-wrap:wrap;justify-content:flex-end;font-size:9px}
+.hero{min-height:650px;padding:75px 0 28px;background-position:58% center}
+.hero-bottom,.section-head{align-items:flex-start;flex-direction:column;gap:20px}
+.hero-note{text-align:left}
+.presentation-grid,.about-grid{grid-template-columns:1fr;gap:28px}
+.presentation-photo img{height:330px;min-height:0}
+.photo-grid{grid-template-columns:1fr 1fr}
+.photo-grid figure:first-child{grid-column:1/-1}
+.photo-grid img{min-height:190px}
+.track{grid-template-columns:30px 1fr;gap:12px}
+.track audio{grid-column:2;width:100%}
+.films{grid-template-columns:1fr}
+.film-caption{align-items:flex-start;flex-direction:column;gap:8px}
+footer{gap:20px;flex-direction:column}
+}
+
+</style></head><body><div class="wrap"><header><a class="brand" href="#top">ANAËL NOURY</a><nav><a href="#works">Works</a><a href="#films">Videos</a><a href="#about">About</a><a href="#contact">Contact</a></nav></header><main id="top">
+<section class="hero"><div class="eyebrow">Composer · Producer · Arranger</div><div class="hero-bottom"><div class="hero-intro">Contemporary compositions shaped by orchestral writing, jazz, R&amp;B and ambient textures.</div><div class="hero-note">Paris / International<br>Orchestral — Jazz — Ambient — Electronic — R&amp;B</div></div></section><hr class="rule">
+<section><div class="intro-grid presentation-grid"><div class="small-copy">Anaël Noury is a contemporary composer, producer and arranger. His work explores cinematic tension, orchestral depth and ambient textures, while moving into electronic production and R&amp;B.</div><figure class="presentation-photo"><img src="assets/studio-console.webp" alt="Anaël working at the mixing console"><figcaption class="photo-label">Anaël Noury — in the studio</figcaption></figure></div></section>
+<section class="photo-story" aria-label="Studio and musical work"><div class="photo-grid"><figure><img src="assets/anael-studio-session.webp" alt="Anaël Noury during a recording session"><figcaption class="photo-label">Recording session</figcaption></figure><figure><img src="assets/anael-recording-room.webp" alt="Anaël Noury in the recording room"><figcaption class="photo-label">In the recording room</figcaption></figure><figure><img src="assets/logic-pro-session.webp" alt="Logic Pro session showing Anaël’s orchestral arrangement"><figcaption class="photo-label">Inside the session — orchestral arrangement</figcaption></figure></div></section><hr class="rule">
+<section id="works">
+<div class="section-head"><h2>Selected works</h2><span>Audio selection / 09 tracks</span></div>
+<div class="track-list">
+<h3 class="track-category">Orchestral</h3>
+<article class="track"><div class="track-no">01</div><div class="track-info"><h3><strong>HORSES</strong></h3><p>Orchestral</p></div><audio controls preload="none"><source src="assets/CATHAY-sans-horloge.mp3" type="audio/mpeg"></audio></article>
+<article class="track"><div class="track-no">02</div><div class="track-info"><h3><strong>RAMPAGE</strong></h3><p>Orchestral</p></div><audio controls preload="none"><source src="assets/RAMPAGE.mp3" type="audio/mpeg"></audio></article>
+<article class="track"><div class="track-no">03</div><div class="track-info"><h3><strong>JEAN'S STORY</strong></h3><p>Orchestral</p></div><audio controls preload="none"><source src="assets/JEANS-STORY.mp3" type="audio/mpeg"></audio></article>
+<article class="track"><div class="track-no">04</div><div class="track-info"><h3><strong>LESS THAN AN HOUR</strong></h3><p>Orchestral</p></div><audio controls preload="none"><source src="assets/Less-than-an-hour.mp3" type="audio/mpeg"></audio></article>
+<article class="track"><div class="track-no">05</div><div class="track-info"><h3><strong>BATAILLE</strong></h3><p>Orchestral</p></div><audio controls preload="none"><source src="assets/BATAILLE.mp3" type="audio/mpeg"></audio></article>
+<h3 class="track-category">Jazz</h3>
+<article class="track"><div class="track-no">06</div><div class="track-info"><h3><strong>CQJV</strong></h3><p>Jazz</p></div><audio controls preload="none"><source src="assets/CQJVD.mp3" type="audio/mpeg"></audio></article>
+<article class="track"><div class="track-no">07</div><div class="track-info"><h3><strong>ECLOSION</strong></h3><p>Jazz</p></div><audio controls preload="none"><source src="assets/Eclosion.mp3" type="audio/mpeg"></audio></article>
+<h3 class="track-category">R&amp;B</h3>
+<article class="track"><div class="track-no">08</div><div class="track-info"><h3><strong>IS IT TOO LATE</strong></h3><p>R&amp;B</p></div><audio controls preload="none"><source src="assets/IS-IT-TOO-LATE.mp3" type="audio/mpeg"></audio></article>
+<article class="track"><div class="track-no">09</div><div class="track-info"><h3><strong>BREATHE</strong></h3><p>R&amp;B</p></div><audio controls preload="none"><source src="assets/BREATHE.mp3" type="audio/mpeg"></audio></article>
+</div></section><hr class="rule">
+<hr class="rule">
+<section id="films"><div class="section-head"><h2>Videos</h2><span>Film &amp; audiovisual work / 01—02</span></div><div class="films">
+<article class="film"><video controls playsinline preload="metadata"><source src="assets/CATHAY-Horses.mp4" type="video/mp4"></video><div class="film-caption"><h3>HORSES for Cathay Pacific with Publicis</h3><span>Film</span></div></article>
+<article class="film"><video controls playsinline preload="metadata"><source src="assets/POSTU.mp4" type="video/mp4"></video><div class="film-caption"><h3>BREATHE for Osteobikefit</h3><span>Film</span></div></article>
+</div></section><hr class="rule">
+<section id="about"><div class="about-grid"><div class="about-kicker">Approach</div><p>Working at the intersection of composition and production, Anaël develops sound identities that give shape to images and ideas. From orchestral gestures to intimate ambient pieces and contemporary electronic rhythms, <br><br>Available for film, audiovisual projects, original composition, arrangement and production.</p></div></section></main></div>
+<section class="contact" id="contact"><div class="wrap"><div class="section-head"><h2>Let's create<br>something.</h2><span>Contact / Collaboration</span></div><a href="mailto:anael.noury@gmail.com">Get in touch ↗</a></div></section><div class="wrap"><footer><span>© Anaël Noury</span><span>Composer · Producer · Arranger</span></footer></div></body></html>
